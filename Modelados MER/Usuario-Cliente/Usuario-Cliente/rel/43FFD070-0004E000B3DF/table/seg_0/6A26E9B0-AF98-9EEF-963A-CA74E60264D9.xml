@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6A26E9B0-AF98-9EEF-963A-CA74E60264D9" name="cliente">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:48:31 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cliente" id="90A70588-AC39-7BF4-0D61-3227368C4F32">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_cliente" id="5273E087-1E47-4484-C375-3FAF708835FB">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido_paterno" id="AAE23B23-7EDA-3110-2257-4E6E70420075">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido_materno" id="C5C4399D-C144-BD4C-2C5D-86B505594003">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_cliente" id="D1DC306B-8AAF-19D2-D2F4-059CC7EEBB7D">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="FE084023-57E0-5526-226F-DAC048167B42">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="13A70481-5EF3-2FFC-B61C-314C653A3C92">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_registro" id="3C33A0A9-EAAA-F443-B598-32D6EC053FD1">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_comuna" id="FB37EC28-60C5-92C4-4590-89FE0F352C1C">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:53:38 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8E7B74B1-2235-8AF2-817F-5A2556588CA0" referredColumn="26F4AE00-6B1E-1C4E-F53F-6D28C8AD786F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A656F34B-21E1-335A-D602-E8C0B233F3B3" name="cliente_PK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:50:19 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90A70588-AC39-7BF4-0D61-3227368C4F32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="20781B39-5E89-52BD-0D96-B5B9260DEE1F" name="cliente_comuna_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-18 04:53:38 UTC</createdTime>
+<ownerDesignName>Usuario-Cliente</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB37EC28-60C5-92C4-4590-89FE0F352C1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
