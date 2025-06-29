@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2BC4D6FB-2A7D-BB10-C397-4A32382345D5" name="COMUNA">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:26:30 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_comuna" id="D22554B0-56BD-0BC6-0501-ECF0E9DCD68B">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:26:50 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="D530DA66-FB23-1625-6B1B-5BA1236CAC33">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:26:50 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_provincia" id="6766396F-4542-7AB6-73D0-E0E475B8C40C">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:28:06 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9BB5F475-0C53-3913-32CD-3020DA76F7FC" referredColumn="DF6649BC-DB33-958A-F779-A3BAB3BD663C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1F14F525-3387-4EAB-3B10-A76DEEA6D285" name="COMUNA_PK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:26:50 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D22554B0-56BD-0BC6-0501-ECF0E9DCD68B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A875981-6FBA-6C28-A6E0-C3D5029BA335" name="COMUNA_PROVINCIA_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:28:06 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6766396F-4542-7AB6-73D0-E0E475B8C40C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

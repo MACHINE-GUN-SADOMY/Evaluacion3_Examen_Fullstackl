@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7024AB1E-39D0-DD8A-EC39-F8C04E8D3E27" name="USUARIOS">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:52:06 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="4865E52E-4D23-213F-E49A-6B2F4241468C">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:55:41 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_usuario" id="F59751CA-5044-74BF-6978-5FEE008D1568">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:55:41 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contraseña" id="9A21708A-9ECB-AD34-9244-95BD36885F6E">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:55:41 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_registro" id="6F41CAC3-8361-9A37-BCF5-A42FD39B9DBD">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:55:41 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_role" id="0D967F95-B996-55F4-4F97-39D92BC1F841">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-19 18:36:03 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0501B977-CD7A-81B0-7B43-630D5C69C68A" referredColumn="B8C6A401-723B-C788-EB8B-D851A7CB839D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4487836-0A27-495F-EE59-2A1B8D09FB3A" name="USUARIOS_PK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 16:15:28 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4865E52E-4D23-213F-E49A-6B2F4241468C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BE529569-51AA-A31F-ECA3-34B36EEC15C9" name="USUARIOS_role_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-19 18:36:03 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D967F95-B996-55F4-4F97-39D92BC1F841"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

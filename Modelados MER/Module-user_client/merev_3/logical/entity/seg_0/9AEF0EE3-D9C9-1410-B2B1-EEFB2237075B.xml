@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9AEF0EE3-D9C9-1410-B2B1-EEFB2237075B" name="PRODUCTOS">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>E23FBFA5-65C1-8489-D988-23AFD7ECDFD9</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID PRODUCTO" id="4F2505A5-AE55-DAE0-5773-2903C85C1C28">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>EE4B1CC1-BF66-8A09-C4F5-5D05D939BD02</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="6D2B38E2-8D24-224B-91EB-7146B7478A67">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>608B2003-12EC-BA16-B817-B0CED00942E8</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="3CE98866-3589-AC73-27A6-0199FEDBDE18">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>84E26824-0CB9-6B4D-594C-1B57B305EBC0</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRECIO" id="E72AFB4E-6902-EACB-9775-B0F1434344A1">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>D746C314-5515-580E-BBCA-2C699580DFED</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SKU" id="D2821B35-0C83-2239-2987-B0D1E706EAAE">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>FA498B29-FAD3-35EA-0097-309C52A2AD72</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STOCK DISPONIBLE" id="0DE18A51-FF48-DE18-DBAC-93895DB76C4F">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>6EFF0DA3-0097-05BF-8B0D-92B107EEA082</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CATEGORIA" id="59D28558-5EEA-0B73-A4E0-1C02B07555FF">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>17A7A2D3-2E11-7D94-8AFE-ADEA75994815</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IMAGEN URL" id="42C9AA10-5F3D-47FD-E40A-C8E70339388F">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>506CE370-BA9B-2389-3075-6F162C9F3D70</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="702D9C54-4A3F-A631-467A-370AB51703FA" name="PRODUCTOS PK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>A4645C12-B014-A113-CC85-3B1736E9F042</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4F2505A5-AE55-DAE0-5773-2903C85C1C28</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

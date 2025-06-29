@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B46FDAAD-3D3A-DD2D-5287-F030BD670194" name="ITEMS_CARRITO">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 16:32:55 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_item" id="8181F947-AEEC-6581-29C4-4D3D19B425E6">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 16:33:31 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad" id="6A4D8483-0B95-050F-A662-651FB0112D63">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 16:33:31 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_unitario" id="C023B4FB-27F1-9A2F-736A-BBC021F561D0">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 16:33:31 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_producto" id="1C88EC8E-5823-B101-32EC-06454E52CF2A">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:15:16 UTC</createdTime>
+<generatorID>B17542D5-ECA6-937E-31A2-007A99D962FB</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34A01D78-0727-0ACD-AAAB-0B169813A9D8" referredColumn="EE4B1CC1-BF66-8A09-C4F5-5D05D939BD02"/>
+</associations>
+</Column>
+<Column name="id_carrito" id="5E2BE9CA-7A29-9A51-A643-CF4E11F24CC8">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:27:34 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0DB92424-0DEB-90FA-24B8-707FB2A363E1" referredColumn="DDA6A47D-BE33-81F1-6B58-570A1A9001F3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4975E858-53B2-BE43-8FA4-872C87FE8E80" name="ITEMS_CARRITO_PK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:08:38 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8181F947-AEEC-6581-29C4-4D3D19B425E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC2E64FA-5A61-33A4-1A27-52F683597C75" name="ITEMS_CARRITO_PRODUCTOS_FK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:15:16 UTC</createdTime>
+<generatorID>570EC257-9548-C2F8-27D7-AB44A5F45B62</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C88EC8E-5823-B101-32EC-06454E52CF2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EFD1D5DC-3F2F-125E-6861-F223275CED17" name="ITEMS_CARRITO_CARRITOS_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:27:34 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E2BE9CA-7A29-9A51-A643-CF4E11F24CC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86462BC5-D895-ADD3-763F-A6339B250A1C" name="USUARIOS">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>7024AB1E-39D0-DD8A-EC39-F8C04E8D3E27</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID USUARIO" id="AA0B3941-94EE-CB0C-C7D7-A3E47EAAA619">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>4865E52E-4D23-213F-E49A-6B2F4241468C</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE USUARIO" id="8A62A2CF-7711-CCF0-E0D7-AEEE0CD36AF4">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>F59751CA-5044-74BF-6978-5FEE008D1568</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CONTRASENA HASH" id="0A9D61D6-CE46-8D03-1910-061660978081">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>9A21708A-9ECB-AD34-9244-95BD36885F6E</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMAIL" id="E2E9AD7D-3C47-A579-F877-765451F191E8">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>AF97835B-2A29-FA10-44AA-3E76562DABB8</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA REGISTRO" id="E3950C36-1A8A-2CC8-F716-0CCA62D00F5A">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>6F41CAC3-8361-9A37-BCF5-A42FD39B9DBD</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ESTADO" id="C11D891C-A145-BC8E-5E11-807594D7CD23">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>6CDB6D61-184A-E83A-9AAB-F89F41AFFE7E</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ROL" id="7D0D0EAD-D45B-D203-58C2-25A5B239CBAA">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>8C8329B7-8C88-4326-D865-05F83CA301A5</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A7B8AF79-2DE4-0934-B163-C8C36AE414AC" name="USUARIOS PK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>F4487836-0A27-495F-EE59-2A1B8D09FB3A</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AA0B3941-94EE-CB0C-C7D7-A3E47EAAA619</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

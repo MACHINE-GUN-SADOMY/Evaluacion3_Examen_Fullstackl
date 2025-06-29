@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="72E3BC87-274F-D3D6-5FBC-DD9BC9C9530D" name="ORDENES">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:41:48 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_orden" id="F102904D-AF8F-1AF3-3CC4-C3BF7B9D156F">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:41:57 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_cliente" id="E7373F2E-FEF7-A07B-7C6A-79B951BC2B56">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:46:05 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_orden" id="B0AFDF85-747F-509D-CA18-F27360C71223">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:46:42 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="monto_total" id="A7E23D83-C000-D899-4F33-213BD429BBF7">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:46:59 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_orden" id="0EE2BC55-7485-B5BD-4F41-7343CC075831">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:47:40 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_carrito" id="F6F49BC2-6CAD-8A97-59D2-C3E74F9D053C">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:50:30 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A8764F6-1521-A131-8B35-C00974F84C86" referredColumn="DDA6A47D-BE33-81F1-6B58-570A1A9001F3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E8B5D09F-8A98-0181-A79F-C6C75FEE9792" name="Ordenes_PK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:42:12 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F102904D-AF8F-1AF3-3CC4-C3BF7B9D156F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CC217E6-4F0F-29D0-0A06-C72707CA6FA6" name="Ordenes_CARRITOS_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:50:30 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6F49BC2-6CAD-8A97-59D2-C3E74F9D053C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

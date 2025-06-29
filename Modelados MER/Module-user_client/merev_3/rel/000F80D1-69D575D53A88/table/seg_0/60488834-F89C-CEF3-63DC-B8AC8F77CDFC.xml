@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="60488834-F89C-CEF3-63DC-B8AC8F77CDFC" name="CLIENTES">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 04:53:21 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cliente" id="2841648D-7728-B9CB-9793-4E2B2027CFBC">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_cliente" id="80668017-3509-B55B-A07C-F0F8EC126036">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido_cliente" id="30960C94-97DB-E890-3D8D-DCC7CCD6DAE9">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="F7029B8D-51F9-48A4-F93C-26ADDE3216E7">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-19 18:33:43 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contraseña" id="3B1AB185-CA66-A9EC-B2F1-0F27159342C8">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-19 18:33:43 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="46CBE2CF-82CA-73EB-2E5A-1753A0CA3918">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="DE3C7191-743F-CDDC-460B-06F606534C67">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nacimiento" id="9450664F-A26D-503B-94D2-373502201457">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_comuna" id="02C6A8D7-4B3F-60D1-7EA1-F9DF4ACBE880">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:29:25 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E162BF2C-C189-E5B9-FF8E-94178D3C1E52" referredColumn="D22554B0-56BD-0BC6-0501-ECF0E9DCD68B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5EB0EA22-B57C-8CE7-D4B2-D255C9542E5A" name="CLIENTES_PK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 05:10:17 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2841648D-7728-B9CB-9793-4E2B2027CFBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7D0139F-D338-97CD-7369-8DA21154CECE" name="CLIENTES_COMUNA_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:29:25 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C6A8D7-4B3F-60D1-7EA1-F9DF4ACBE880"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

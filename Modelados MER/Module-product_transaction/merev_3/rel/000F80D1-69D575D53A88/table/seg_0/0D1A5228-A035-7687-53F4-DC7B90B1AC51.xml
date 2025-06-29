@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D1A5228-A035-7687-53F4-DC7B90B1AC51" name="DETALLE_ORDEN">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 02:58:14 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_detalle_orden" id="B7DC8C1C-B950-2A9A-036B-E4BA0B8C78ED">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 02:58:43 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad_productos" id="E58D73AA-53BE-2A56-CD5D-21FF2AD4BB28">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:48:52 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sub_item" id="B24DB8B2-AF5B-3E43-DDDC-F103587F5EFF">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:49:55 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_orden" id="1E20705C-63AA-06DA-7E93-733B92D473D8">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:49:02 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B249860-CBB3-A531-19B2-6F9134B4C61E" referredColumn="F102904D-AF8F-1AF3-3CC4-C3BF7B9D156F"/>
+</associations>
+</Column>
+<Column name="id_producto" id="325E6826-32C3-3E6B-0733-3F847E51F76D">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:22:49 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7EB18A08-3206-730E-1388-4B4ECF03C0CF" referredColumn="EE4B1CC1-BF66-8A09-C4F5-5D05D939BD02"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB04DCDE-14E3-4457-79EF-4B609198AA43" name="Detalle_boleta_PK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 02:58:43 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7DC8C1C-B950-2A9A-036B-E4BA0B8C78ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E141E78A-7E54-7AC5-3A72-776DC258E2A7" name="detalle_orden_Ordenes_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-27 20:49:02 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E20705C-63AA-06DA-7E93-733B92D473D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="620D6A9C-7DEC-A071-00A1-C6AC4D174159" name="detalle_orden_PRODUCTOS_FK">
+<createdBy>kristian</createdBy>
+<createdTime>2025-06-28 02:22:49 UTC</createdTime>
+<ownerDesignName>merev_3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="325E6826-32C3-3E6B-0733-3F847E51F76D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

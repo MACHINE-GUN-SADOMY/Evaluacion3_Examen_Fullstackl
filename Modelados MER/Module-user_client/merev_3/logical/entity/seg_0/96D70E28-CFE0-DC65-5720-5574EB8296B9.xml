@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="96D70E28-CFE0-DC65-5720-5574EB8296B9" name="CARRITOS">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>F326ED43-A79A-5C8F-55F0-8A9AA7918ECE</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID CARRITO" id="5FDBFF5F-1A84-AED1-DF01-D9F455990C9D">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>DDA6A47D-BE33-81F1-6B58-570A1A9001F3</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID CLIENTE" id="94801A5F-091D-796A-2702-DA58F06BDC78">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>1B1D9076-2B14-204C-06A3-D16099678068</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA CREACION" id="99E002D5-8933-200B-B7C1-284222FA2EF3">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>E6997A77-89B4-8607-E1EA-49507F2DE196</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA ULTIMA ACTUALIZACION" id="FBF5AC5F-419A-9E26-3022-6A6076120C06">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>0CE2114E-0BD3-DB6E-9B7F-35AFE51242AE</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ESTADO" id="63FCD1D3-18EF-7B54-1A6E-0D1EC429B0FB">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>DA22994F-73EC-3F60-EE96-4D6D55B5AA59</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID CLIENTE1" id="7CF08037-A4DD-DA0D-E4BA-42541EBE9FE4">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:14:05 UTC</createdTime>
+<generatorID>1EED9A0E-FC4B-6DAE-334D-9C310DEB9C03</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<referedAttribute>B6980427-5628-18B1-763A-A356A9FC0871</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5AA10425-5C66-B83D-20DE-BF7A93D20C9C" name="CARRITOS PK">
+<createdBy>renat</createdBy>
+<createdTime>2025-06-19 18:12:53 UTC</createdTime>
+<generatorID>B0C8AF5A-A514-6896-0186-78638A9CDF4F</generatorID>
+<ownerDesignName>merev_3</ownerDesignName>
+<engineerTo>
+<item key="000F80D1-28CA-95AC-EC43-69D575D53A88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5FDBFF5F-1A84-AED1-DF01-D9F455990C9D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
