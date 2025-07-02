@@ -42,7 +42,8 @@ public class ProvinciaService {
 
         ProvinciaJpa savedProvincia = provinciaJpaRepository.save(provincia);
 
-        RegionResponse regionResponse = new RegionResponse(savedProvincia.getIdRegion().getIdRegion(), savedProvincia.getIdRegion().getNombreRegion());
+        RegionResponse regionResponse = new RegionResponse(savedProvincia.getIdRegion().getIdRegion(),
+                savedProvincia.getIdRegion().getNombreRegion());
 
         return new ProvinciaResponse(
                 savedProvincia.getIdProvincia(),

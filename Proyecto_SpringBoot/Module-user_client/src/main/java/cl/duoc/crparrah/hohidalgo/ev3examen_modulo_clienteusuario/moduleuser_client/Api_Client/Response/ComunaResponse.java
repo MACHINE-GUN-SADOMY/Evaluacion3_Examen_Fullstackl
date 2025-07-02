@@ -10,4 +10,5 @@ import lombok.Setter;
 public class ComunaResponse {
     private Integer idComuna;
     private String nombreComuna;
+    private ProvinciaResponse provincia;
 }

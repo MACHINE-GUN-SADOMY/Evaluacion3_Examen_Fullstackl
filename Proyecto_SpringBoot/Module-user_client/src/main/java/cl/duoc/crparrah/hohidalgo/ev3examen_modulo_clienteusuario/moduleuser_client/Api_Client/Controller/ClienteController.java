@@ -16,20 +16,16 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping
-    public ResponseEntity<List<ClienteJpa>> getAllClientes() {
-        List<ClienteJpa> clientes = clienteService.getAllClientes();
-        return new ResponseEntity<>(clientes, HttpStatus.OK);
-    }
+    //@GetMapping
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ClienteJpa> getClienteById(@PathVariable Integer id) {
-        Optional<ClienteJpa> cliente = clienteService.getClienteById(id);
-        return cliente.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
+    //@GetMapping("/{id}")
 
-    // post
-    // delete
-    // put
+    //@PostMapping
+
+    //@PutMapping("/{id}")
+
+    //@DeleteMapping("/{id}")
+
+
+
 }

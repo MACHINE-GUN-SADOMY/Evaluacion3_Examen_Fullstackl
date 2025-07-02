@@ -9,4 +9,5 @@ import lombok.Setter;
 @AllArgsConstructor @NoArgsConstructor
 public class ComunaRequest {
     private String comunaNombre;
+    private Integer idProvincia;
 }
