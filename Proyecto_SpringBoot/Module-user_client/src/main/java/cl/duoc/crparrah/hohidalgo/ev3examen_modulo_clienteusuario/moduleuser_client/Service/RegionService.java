@@ -1,6 +1,7 @@
 package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Service;
 
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.RegionRequest;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.RegionResponse;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.RegionJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.RegionJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +19,23 @@ public class RegionService {
         this.regionJpaRepository = regionJpaRepository;
     }
 
-    public Optional<Integer> createRegion(RegionRequest regionRequest) {
-        Optional <RegionJpa> found = regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion());
+    public Optional<Integer> saveRegion(RegionRequest regionRequest) {
+        Optional<RegionJpa> found = regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion());
         if (found.isPresent()) {
             return Optional.empty();
         }
-
         RegionJpa newRegion = new RegionJpa();
         newRegion.setNombreRegion(regionRequest.getNombreRegion());
-
         return Optional.of(regionJpaRepository.save(newRegion).getIdRegion());
+    }
+
+    public RegionResponse createRegion(RegionRequest regionRequest) {
+        if (regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion()).isPresent()) {
+            throw new RuntimeException("La región '" + regionRequest.getNombreRegion() + "' ya existe.");
+        }
+        RegionJpa region = new RegionJpa(regionRequest.getNombreRegion());
+        RegionJpa savedRegion = regionJpaRepository.save(region);
+        return new RegionResponse(savedRegion.getIdRegion(), savedRegion.getNombreRegion());
     }
 
     public Optional <RegionJpa> findRegionById(Integer idRegion) {
@@ -38,5 +46,23 @@ public class RegionService {
         return regionJpaRepository.findAll();
     }
 
-    // falta delete , put
+    public void deleteRegion(Integer idRegion) {
+        if (!regionJpaRepository.existsById(idRegion)) {
+            throw new RuntimeException("Region con ID " + idRegion + " no existe");
+        }regionJpaRepository.deleteById(idRegion);
+    }
+
+    public RegionResponse updateRegion(Integer id, RegionRequest regionRequest) {
+        RegionJpa found = regionJpaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Región con ID " + id + " no encontrada."));
+
+        if (!found.getNombreRegion().equals(regionRequest.getNombreRegion())) {
+            if (regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion()).isPresent()) {
+                throw new RuntimeException("El nombre de región '" + regionRequest.getNombreRegion() + "' ya existe.");
+            }
+        }
+        found.setNombreRegion(regionRequest.getNombreRegion());
+        RegionJpa updatedRegion = regionJpaRepository.save(found);
+        return new RegionResponse(updatedRegion.getIdRegion(), updatedRegion.getNombreRegion());
+    }
 }

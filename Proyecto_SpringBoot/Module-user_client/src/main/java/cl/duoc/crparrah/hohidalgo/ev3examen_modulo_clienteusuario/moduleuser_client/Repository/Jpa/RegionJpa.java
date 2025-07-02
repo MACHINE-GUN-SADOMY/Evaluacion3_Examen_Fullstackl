@@ -17,4 +17,8 @@ public class RegionJpa {
 
     @Column (name = "nombre_region", nullable = false, unique = true)
     private String nombreRegion;
+
+    public RegionJpa(String nombreRegion) {
+        this.nombreRegion = nombreRegion;
+    }
 }
