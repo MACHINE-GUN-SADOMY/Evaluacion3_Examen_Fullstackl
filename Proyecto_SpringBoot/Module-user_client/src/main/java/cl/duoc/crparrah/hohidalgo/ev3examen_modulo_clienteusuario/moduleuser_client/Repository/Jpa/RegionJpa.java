@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Entity
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor
-@Table (name = "region")
+@Table (name = "regiones")
 public class RegionJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)

@@ -8,5 +8,5 @@ import lombok.Setter;
 @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter
 public class RoleRequest {
-    private String roleNombre;
+    private String nombreRole;
 }

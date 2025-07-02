@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 public class RegionResponse {
-    private Integer region;
+    private Integer idRegion;
     private String regionName;
 }

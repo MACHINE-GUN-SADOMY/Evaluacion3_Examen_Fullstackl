@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table (name = "provincia")
+@Table (name = "provincias")
 public class ProvinciaJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)

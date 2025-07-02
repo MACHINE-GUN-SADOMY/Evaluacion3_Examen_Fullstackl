@@ -1,5 +1,9 @@
 package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Controller;
 
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.RegionRequest;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.RoleRequest;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.RegionResponse;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.RoleResponse;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.ClienteJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.RoleJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Service.RoleService;
@@ -24,11 +28,41 @@ public class RoleController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<RoleJpa> getRoleById(@RequestParam Integer id) {
-        Optional<RoleJpa> role = roleService.findById(id);
+    public ResponseEntity<RoleJpa> getRoleById(@PathVariable Integer id) {
+        Optional<RoleJpa> role = roleService.findRegionById(id);
         return role.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    // falta post, put delete
+    @PostMapping
+    public ResponseEntity<?> createRole(@RequestBody RoleRequest roleRequest) {
+        try {
+            RoleResponse createdRole = roleService.createRole(roleRequest);
+            return new ResponseEntity<>(createdRole, HttpStatus.CREATED);
+        } catch (RuntimeException exception) {
+            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRole(@PathVariable Integer id) {
+        try{
+            roleService.deleteRole(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }catch (RuntimeException exception) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateRegion(@PathVariable Integer id,@RequestBody RoleRequest roleRequest) {
+        try {
+            RoleResponse updatedRole = roleService.updateRole(id, roleRequest);
+            return new ResponseEntity<>(updatedRole, HttpStatus.OK);
+        } catch (RuntimeException e) {
+            if (e.getMessage().contains("no encontrada")) {
+                return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+            }return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
 }

@@ -9,5 +9,5 @@ import lombok.Setter;
 @AllArgsConstructor @NoArgsConstructor
 public class RoleResponse {
     private Integer idRole;
-    private String roleNombre;
+    private String nombreRole;
 }

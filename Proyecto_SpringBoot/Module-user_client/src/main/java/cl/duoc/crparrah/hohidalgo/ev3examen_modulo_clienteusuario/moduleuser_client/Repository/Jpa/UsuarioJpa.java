@@ -8,7 +8,7 @@ import java.util.Date;
 @Entity
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor
-@Table (name = "usuario")
+@Table (name = "usuarios")
 public class UsuarioJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)

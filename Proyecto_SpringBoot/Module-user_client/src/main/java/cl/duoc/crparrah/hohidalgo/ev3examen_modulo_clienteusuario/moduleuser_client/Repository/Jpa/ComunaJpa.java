@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table(name = "comuna")
+@Table(name = "comunas")
 public class ComunaJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
