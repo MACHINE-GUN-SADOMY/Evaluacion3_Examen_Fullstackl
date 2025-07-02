@@ -18,5 +18,5 @@ public class ProvinciaJpa {
 
     @ManyToOne
     @JoinColumn (name = "id_region", nullable = false)
-    private RegionJpa region;
+    private RegionJpa idRegion;
 }

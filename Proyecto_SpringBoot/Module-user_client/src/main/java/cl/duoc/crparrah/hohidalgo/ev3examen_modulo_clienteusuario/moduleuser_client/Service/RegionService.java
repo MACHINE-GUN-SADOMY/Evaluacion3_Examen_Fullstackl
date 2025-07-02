@@ -19,16 +19,6 @@ public class RegionService {
         this.regionJpaRepository = regionJpaRepository;
     }
 
-    public Optional<Integer> saveRegion(RegionRequest regionRequest) {
-        Optional<RegionJpa> found = regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion());
-        if (found.isPresent()) {
-            return Optional.empty();
-        }
-        RegionJpa newRegion = new RegionJpa();
-        newRegion.setNombreRegion(regionRequest.getNombreRegion());
-        return Optional.of(regionJpaRepository.save(newRegion).getIdRegion());
-    }
-
     public RegionResponse createRegion(RegionRequest regionRequest) {
         if (regionJpaRepository.findByNombreRegion(regionRequest.getNombreRegion()).isPresent()) {
             throw new RuntimeException("La región '" + regionRequest.getNombreRegion() + "' ya existe.");

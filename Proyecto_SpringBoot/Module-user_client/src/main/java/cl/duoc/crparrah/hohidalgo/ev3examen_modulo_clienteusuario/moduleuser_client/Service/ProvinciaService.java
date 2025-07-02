@@ -1,6 +1,9 @@
 package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Service;
 
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.ProvinciaRequest;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.RegionRequest;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.ProvinciaResponse;
+import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.RegionResponse;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.ProvinciaJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.RegionJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.ProvinciaJpaRepository;
@@ -24,37 +27,67 @@ public class ProvinciaService {
         this.regionJpaRepository = regionJpaRepository;
     }
 
-    // GUARDAR PROVINCIA
-    public Optional<Integer> saveProvincia(ProvinciaRequest provincia) {
-        Optional<ProvinciaJpa> found = provinciaJpaRepository.findByNombreProvincia(provincia.getNombreProvincia());
-        if (found.isPresent()) {
-            return Optional.empty();
+
+    public ProvinciaResponse createProvincia(ProvinciaRequest provinciaRequest) {
+        if (provinciaJpaRepository.findByNombreProvincia(provinciaRequest.getNombreProvincia()).isPresent()) {
+            throw new RuntimeException("La provincia con nombre: " + provinciaRequest.getNombreProvincia() + " ya existe.");
         }
 
-        RegionJpa region = regionJpaRepository.findById(provincia.getIdProvincia())
-                .orElseThrow(() -> new RuntimeException("Provincia no encontrado"));
+        RegionJpa region = regionJpaRepository.findById(provinciaRequest.getIdRegion())
+                .orElseThrow(() -> new RuntimeException("Región con ID " + provinciaRequest.getIdRegion() + " no encontrada."));
 
-        ProvinciaJpa newProvincia = new ProvinciaJpa();
-        newProvincia.setNombreProvincia(provincia.getNombreProvincia());
-        newProvincia.setRegion(region);
+        ProvinciaJpa provincia = new ProvinciaJpa();
+        provincia.setNombreProvincia(provinciaRequest.getNombreProvincia());
+        provincia.setIdRegion(region);
 
-        return Optional.of(provinciaJpaRepository.save(newProvincia).getIdProvincia());
+        ProvinciaJpa savedProvincia = provinciaJpaRepository.save(provincia);
+
+        RegionResponse regionResponse = new RegionResponse(savedProvincia.getIdRegion().getIdRegion(), savedProvincia.getIdRegion().getNombreRegion());
+
+        return new ProvinciaResponse(
+                savedProvincia.getIdProvincia(),
+                savedProvincia.getNombreProvincia(),
+                regionResponse);
     }
 
-    // GET TODAS LAS PROVINCIAS
     public List <ProvinciaJpa> getAllProvincias() {
         return provinciaJpaRepository.findAll();
     }
 
-    // GET PROVINCIA ID
-    public Optional<ProvinciaJpa> getProvincia(Integer id) {
+    public Optional<ProvinciaJpa> getProvinciaById(Integer id) {
         return provinciaJpaRepository.findById(id);
     }
 
-    // UPDATE
 
-    // DELETE
-    public boolean deleteClienteById(Integer id) {
+    public ProvinciaResponse updateProvincia(Integer id, ProvinciaRequest provinciaRequest) {
+        ProvinciaJpa existingProvincia = provinciaJpaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Provincia con ID " + id + " no encontrada."));
+
+        if (!existingProvincia.getNombreProvincia().equals(provinciaRequest.getNombreProvincia())) {
+            if (provinciaJpaRepository.findByNombreProvincia(provinciaRequest.getNombreProvincia()).isPresent()) {
+                throw new RuntimeException("La provincia '" + provinciaRequest.getNombreProvincia() + "' ya está registrada.");
+            }
+        }
+
+        if (!existingProvincia.getIdRegion().getIdRegion().equals(provinciaRequest.getIdRegion())) {
+            RegionJpa newRegion = regionJpaRepository.findById(provinciaRequest.getIdRegion())
+                    .orElseThrow(() -> new RuntimeException("Región con ID " + provinciaRequest.getIdRegion() + " no encontrada."));
+            existingProvincia.setIdRegion(newRegion);
+        }
+
+        existingProvincia.setNombreProvincia(provinciaRequest.getNombreProvincia());
+        ProvinciaJpa updatedProvincia = provinciaJpaRepository.save(existingProvincia);
+
+        RegionResponse regionResponse = new RegionResponse(updatedProvincia.getIdRegion().getIdRegion(), updatedProvincia.getIdRegion().getNombreRegion());
+
+        return new ProvinciaResponse(
+                updatedProvincia.getIdProvincia(),
+                updatedProvincia.getNombreProvincia(),
+                regionResponse // ¡CORREGIDO! Pasando el objeto RegionResponse
+        );
+    }
+
+    public boolean deleteProvinciaById(Integer id) {
         if (!provinciaJpaRepository.existsById(id)) {
             return false;
         }provinciaJpaRepository.deleteById(id);
