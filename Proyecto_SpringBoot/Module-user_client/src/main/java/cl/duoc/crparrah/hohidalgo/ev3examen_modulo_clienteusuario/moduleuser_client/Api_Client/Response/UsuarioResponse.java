@@ -13,6 +13,6 @@ public class UsuarioResponse {
     private Integer idUsuario;
     private String nombreUsuario;
     private String contrasenia;
-    private String roleUsuario;
     private Date fechaRegistro;
+    private RoleResponse role;
 }

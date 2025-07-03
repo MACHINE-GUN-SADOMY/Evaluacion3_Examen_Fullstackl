@@ -94,5 +94,4 @@ public class ProvinciaService {
         }provinciaJpaRepository.deleteById(id);
         return true;
     }
-
 }

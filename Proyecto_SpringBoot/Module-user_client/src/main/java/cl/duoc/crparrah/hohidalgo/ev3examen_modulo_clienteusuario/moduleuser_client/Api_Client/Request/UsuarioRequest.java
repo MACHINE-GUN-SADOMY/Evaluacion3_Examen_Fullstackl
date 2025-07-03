@@ -10,6 +10,5 @@ public class UsuarioRequest {
     private String email;
     private String password;
     private Date fecaRegistroo;
-    private String roleUsuario;
-    private Integer idComuna;
+    private Integer idRole;
 }

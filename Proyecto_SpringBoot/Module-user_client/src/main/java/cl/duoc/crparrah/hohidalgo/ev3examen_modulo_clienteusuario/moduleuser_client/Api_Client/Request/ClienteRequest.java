@@ -2,15 +2,17 @@ package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_cl
 
 import lombok.*;
 
+import java.time.LocalDate;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 public class ClienteRequest {
     private String nombreCliente;
     private String apellidoCliente;
-    private String email;
-    private String contrasenia;
-    private String direccion;
     private Integer telefono;
+    private String email;
+    private String contraseña;
+    private String direccion;
+    private LocalDate fechaNacimiento;
     private Integer idComuna;
 }

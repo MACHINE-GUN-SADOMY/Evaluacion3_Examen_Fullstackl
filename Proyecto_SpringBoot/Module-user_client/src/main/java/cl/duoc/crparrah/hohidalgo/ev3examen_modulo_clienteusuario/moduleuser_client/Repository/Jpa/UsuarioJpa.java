@@ -27,4 +27,11 @@ public class UsuarioJpa {
     @ManyToOne
     @JoinColumn (name = "id_role", nullable = false)
     private RoleJpa role;
+
+    public UsuarioJpa(String nombreUsuario, String contraseñaUsuario, Date fechaRegistro, RoleJpa role) {
+        this.nombreUsuario = nombreUsuario;
+        this.contraseñaUsuario = contraseñaUsuario;
+        this.fechaRegistro = fechaRegistro;
+        this.role = role;
+    }
 }

@@ -27,7 +27,7 @@ public class ClienteJpa {
     private String email;
 
     @Column (name = "contraseña", nullable = false,updatable = true, unique = false)
-    private String contrasena;
+    private String contraseña;
 
     @Column (name = "direccion", nullable = false,updatable = true, unique = false)
     private String direccion;
@@ -43,11 +43,11 @@ public class ClienteJpa {
     @JoinColumn (name = "id_comuna", nullable = false)
     private ComunaJpa comuna;
 
-    public ClienteJpa(String nombreCliente, String apellidoCliente, String email, String contrasena, String direccion, Integer telefono,ComunaJpa comuna) {
+    public ClienteJpa(String nombreCliente, String apellidoCliente, String email, String contraseña, String direccion, Integer telefono,ComunaJpa comuna) {
         this.nombreCliente = nombreCliente;
         this.apellidoCliente = apellidoCliente;
         this.email = email;
-        this.contrasena = contrasena;
+        this.contraseña = contraseña;
         this.direccion = direccion;
         this.telefono = telefono;
         this.comuna = comuna;
