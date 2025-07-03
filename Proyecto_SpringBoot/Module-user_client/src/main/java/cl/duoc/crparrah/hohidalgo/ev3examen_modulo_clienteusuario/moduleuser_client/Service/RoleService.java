@@ -27,7 +27,7 @@ public class RoleService {
         return roleJpaRepository.findAll();
     }
 
-    public Optional<RoleJpa> findRegionById(Integer id) {
+    public Optional<RoleJpa> findRoleById(Integer id) {
         return roleJpaRepository.findById(id);
     }
 
@@ -59,5 +59,9 @@ public class RoleService {
         if (!roleJpaRepository.existsById(idRole)) {
             throw new RuntimeException("Role con ID " + idRole + " no existe");
         }roleJpaRepository.deleteById(idRole);
+    }
+
+    public Optional<RoleJpa> findRoleByNombreRole(String nombreRole) {
+        return roleJpaRepository.findByNombreRole(nombreRole);
     }
 }

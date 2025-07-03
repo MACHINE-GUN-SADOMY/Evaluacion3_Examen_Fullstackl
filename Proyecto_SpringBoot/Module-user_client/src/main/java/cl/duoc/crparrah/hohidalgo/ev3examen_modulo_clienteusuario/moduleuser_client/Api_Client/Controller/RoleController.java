@@ -26,7 +26,7 @@ public class RoleController {
 
     @GetMapping("/{id}")
     public ResponseEntity<RoleJpa> getRoleById(@PathVariable Integer id) {
-        Optional<RoleJpa> role = roleService.findRegionById(id);
+        Optional<RoleJpa> role = roleService.findRoleById(id);
         return role.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }

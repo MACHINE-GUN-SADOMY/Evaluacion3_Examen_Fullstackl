@@ -88,10 +88,9 @@ public class ProvinciaService {
         );
     }
 
-    public boolean deleteProvinciaById(Integer id) {
+    public void deleteProvinciaById(Integer id) {
         if (!provinciaJpaRepository.existsById(id)) {
-            return false;
+            throw new RuntimeException("Provincia con ID " + id + " no existe");
         }provinciaJpaRepository.deleteById(id);
-        return true;
     }
 }
