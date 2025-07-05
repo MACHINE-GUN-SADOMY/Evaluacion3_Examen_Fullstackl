@@ -18,11 +18,8 @@ public class OrdenJpa {
     @Column (name = "id_orden", nullable = false, unique = true, updatable = false)
     private Integer idOrden;
 
-    @Column(name = "id_cliente", nullable = false, unique = true, updatable = false)
+    @Column (name = "id_cliente", nullable = false,unique = true,updatable = false)
     private Integer idCliente;
-
-    @Column(name = "direccion_cliente", nullable = false)
-    private String direccionCliente;
 
     @Column (name = "fecha_orden", nullable = false, unique = false,updatable = false)
     private LocalDate fechaOrden;
@@ -34,6 +31,6 @@ public class OrdenJpa {
     private String estadoOrden;
 
     @OneToOne
-    @JoinColumn(name = "id_carrito", referencedColumnName = "id_carrito")
+    @JoinColumn (name = "id_carrito", nullable = false)
     private CarritoJpa carrito;
 }

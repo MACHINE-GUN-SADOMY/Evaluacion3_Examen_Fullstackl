@@ -39,8 +39,6 @@ public class UsuarioService {
 
         UsuarioJpa usuario = new UsuarioJpa();
         usuario.setNombreUsuario(usuarioRequest.getNombreUsuario());
-        usuario.setContraseñaUsuario(usuarioRequest.getNombreUsuario());
-        usuario.setFechaRegistro(usuarioRequest.getFecaRegistro());
         usuario.setRole(role);
 
         UsuarioJpa savedUsuario = usuarioJpaRepository.save(usuario);

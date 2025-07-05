@@ -13,13 +13,10 @@ import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_cli
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.ProvinciaJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.RegionJpa;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 
 import java.util.List;
 import java.util.Optional;
-
 
 @Service
 public class ClienteService {
@@ -72,7 +69,7 @@ public class ClienteService {
         );
     }
 
-    public ClienteService(ClienteJpaRepository clienteJpaRepository, ComunaJpaRepository comunaJpaRepository, RestClient restClient) {
+    public ClienteService(ClienteJpaRepository clienteJpaRepository, ComunaJpaRepository comunaJpaRepository) {
         this.clienteJpaRepository = clienteJpaRepository;
         this.comunaJpaRepository = comunaJpaRepository;
     }
@@ -164,5 +161,4 @@ public class ClienteService {
 
         return mapToClienteResponse(updatedCliente);
     }
-
 }

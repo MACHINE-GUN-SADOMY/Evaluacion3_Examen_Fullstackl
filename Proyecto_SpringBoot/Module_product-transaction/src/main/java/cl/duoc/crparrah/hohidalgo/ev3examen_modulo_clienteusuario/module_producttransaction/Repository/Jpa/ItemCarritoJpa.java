@@ -1,6 +1,5 @@
 package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.module_producttransaction.Repository.Jpa;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,6 +30,5 @@ public class ItemCarritoJpa {
 
     @ManyToOne
     @JoinColumn (name = "id_carrito", nullable = false)
-    @JsonBackReference
     private CarritoJpa carrito;
 }

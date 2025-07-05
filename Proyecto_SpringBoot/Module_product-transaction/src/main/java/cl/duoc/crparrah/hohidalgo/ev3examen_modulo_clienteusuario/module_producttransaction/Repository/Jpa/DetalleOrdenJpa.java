@@ -24,13 +24,8 @@ public class DetalleOrdenJpa {
     @Column (name = "sub_item", nullable = false, updatable = false, unique = true)
     private Integer sub_item;
 
-    @Column (name = "monto_total", nullable = false, updatable = true, unique = false)
-    private Integer montoTotal;
-
-
-
-    @OneToOne
-    @JoinColumn(name = "id_orden", referencedColumnName = "id_orden")
+    @ManyToOne
+    @JoinColumn(name = "id_orden", nullable = false)
     private OrdenJpa orden;
 
     @ManyToOne

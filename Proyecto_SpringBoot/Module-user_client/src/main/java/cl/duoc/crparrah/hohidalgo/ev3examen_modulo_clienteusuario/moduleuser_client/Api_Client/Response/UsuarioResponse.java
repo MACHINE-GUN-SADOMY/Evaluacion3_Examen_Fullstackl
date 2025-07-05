@@ -12,7 +12,7 @@ import java.util.Date;
 public class UsuarioResponse {
     private Integer idUsuario;
     private String nombreUsuario;
-    private String contraseñaUsuario;
+    private String contrasenia;
     private Date fechaRegistro;
     private RoleResponse role;
 }

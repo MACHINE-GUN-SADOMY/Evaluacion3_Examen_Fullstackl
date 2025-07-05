@@ -1,28 +1,21 @@
 package cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.module_producttransaction.Api_Client.RestConfig;
 
-import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.module_producttransaction.Api_Client.ClienteRestClient;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.web.client.RestClient;
 
 @Configuration
 public class RestClientConfig {
+    private static final String SERVICIO_INVENTARIO_URL = "http://localhost:8091/api";
 
     @Bean
-    public RestClient restClient() {
+    public RestClient.Builder inventoryServiceClientBuilder() {
         return RestClient.builder()
-                .baseUrl("http://localhost:8090") // URL del microservicio Cliente
-                .build();
+                .baseUrl(SERVICIO_INVENTARIO_URL);
     }
 
     @Bean
-    public ClienteRestClient clienteRestClient(RestClient restClient) {
-        return idCliente -> restClient.get()
-                .uri("/clientes/{id}", idCliente)
-                .retrieve()
-                .toBodilessEntity(); // solo status, sin body
+    public RestClient inventoryServiceClient(RestClient.Builder builder) {
+        return builder.build();
     }
 }

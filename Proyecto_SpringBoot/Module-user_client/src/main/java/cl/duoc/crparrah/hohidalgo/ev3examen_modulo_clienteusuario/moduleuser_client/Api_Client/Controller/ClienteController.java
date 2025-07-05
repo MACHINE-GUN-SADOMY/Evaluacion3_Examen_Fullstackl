@@ -5,7 +5,6 @@ import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_cli
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Request.ComunaRequest;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.ClienteResponse;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Api_Client.Response.ComunaResponse;
-import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.ClienteJpaRepository;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.ClienteJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Repository.Jpa.ComunaJpa;
 import cl.duoc.crparrah.hohidalgo.ev3examen_modulo_clienteusuario.moduleuser_client.Service.ClienteService;
@@ -23,9 +22,6 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @Autowired
-    private ClienteJpaRepository clienteJpaRepository;
-
     @GetMapping
     public ResponseEntity<List<ClienteJpa>> getAllClientes() {
         List<ClienteJpa> clientes = clienteService.getAllClientes();
@@ -42,7 +38,9 @@ public class ClienteController {
     @PostMapping
     public ResponseEntity<ClienteResponse> createUsuario(@RequestBody ClienteRequest clienteRequest) {
         try {
+            // Llama al método createCliente del servicio para guardar el nuevo cliente
             ClienteResponse newCliente = clienteService.createCliente(clienteRequest);
+            // Si la creación es exitosa, devuelve el cliente creado con estado 201 Created
             return new ResponseEntity<>(newCliente, HttpStatus.CREATED);
         } catch (RuntimeException e) {
             // Captura excepciones de Runtime (como las de email/teléfono duplicado o comuna no encontrada)
