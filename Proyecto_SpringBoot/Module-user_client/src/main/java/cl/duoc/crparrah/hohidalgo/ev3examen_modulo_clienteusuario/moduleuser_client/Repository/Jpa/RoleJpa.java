@@ -6,7 +6,7 @@ import lombok.*;
 @Entity
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor
-@Table (name = "role")
+@Table (name = "roles")
 public class RoleJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -15,4 +15,8 @@ public class RoleJpa {
 
     @Column (name = "nombre_role", nullable = false,unique = true,updatable = true)
     private String nombreRole;
+
+    public RoleJpa(String nombreRole) {
+        this.nombreRole = nombreRole;
+    }
 }

@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "89f6ed9c-c2f2-40a0-beb4-341ccf97442a",
+		"name": "Comunas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44648620"
+	},
+	"item": [
+		{
+			"name": "GET COMUNA ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/comunas/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"comunas",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL COMUNAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/comunas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"comunas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST COMUNA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"comunaNombre\": \"test_post\",\r\n    \"idProvincia\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/comunas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"comunas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT COMUNA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"comunaNombre\": \"test_put\",\r\n    \"idProvincia\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/comunas/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"comunas",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COMUNA",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreProvincia\": \"Test_post\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/comunas/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"comunas",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
