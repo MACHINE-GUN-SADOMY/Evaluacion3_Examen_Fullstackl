@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table (name = "provincia")
+@Table (name = "provincias")
 public class ProvinciaJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -18,5 +18,5 @@ public class ProvinciaJpa {
 
     @ManyToOne
     @JoinColumn (name = "id_region", nullable = false)
-    private RegionJpa region;
+    private RegionJpa idRegion;
 }

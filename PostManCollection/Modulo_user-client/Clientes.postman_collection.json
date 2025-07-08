@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "6bbf546a-afb3-44a6-806b-c7601bf62f08",
+		"name": "Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44648620"
+	},
+	"item": [
+		{
+			"name": "GET CLIENTE ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/clientes/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"clientes",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL CLIENTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CLIENTES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombreCliente\": \"Horacio\",\r\n        \"apellidoCliente\": \"Hidalgo\",\r\n        \"email\": \"ejemplo@correo.com\",\r\n        \"contraseña\": \"password_post\",\r\n        \"direccion\": \"el bosque\",\r\n        \"telefono\": 1234567890,\r\n        \"fechaNacimiento\": \"1990-01-15\",\r\n        \"idComuna\": 15\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CLIENTE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombreCliente\": \"Cristian\",\r\n        \"apellidoCliente\": \"Parra\",\r\n        \"email\": \"ejemplo_1@correo.com\",\r\n        \"contraseña\": \"password_Put\",\r\n        \"direccion\": \"la florida\",\r\n        \"telefono\": 12345678,\r\n        \"fechaNacimiento\": \"2025-07-04\",\r\n        \"idComuna\": 14\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/clientes/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"clientes",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CLIENTES",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreProvincia\": \"Test_post\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/clientes/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"clientes",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "74e0bc48-a8c6-48be-8778-307cc2a583dd",
+		"name": "Carrito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44648620"
+	},
+	"item": [
+		{
+			"name": "GET ALL CARRITO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/api/carritos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CARRITO BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/api/carritos/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR CARRITO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/api/carritos/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AGREGAR PRODUCTOS AL CARRITO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/carritos/agregar/5/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos",
+						"agregar",
+						"5",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ELIMINAR ITEM DEL CARRITO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/carritos/eliminar/5/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos",
+						"eliminar",
+						"5",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CARRITO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreProducto\": \"test_Post\",\r\n    \"descripcionProducto\": \"test_post\",\r\n    \"precio\": 15001,\r\n    \"sku\": \"sku_post\",\r\n    \"stockDisponible\": 11,\r\n    \"categoria\": \"Tests\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/carritos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"carritos",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
