@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "f31f56a1-3a1b-46d6-8e8d-b75b03927b6b",
+		"name": "Detalle_Orden",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44648620"
+	},
+	"item": [
+		{
+			"name": "GET DETALLE ORDEN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreRegion\": \"Test_post\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/detalle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DETALLE ORDEN ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/detalle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ORDEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idCliente\": 10,\r\n  \"fechaOrden\": \"2025-07-04\",\r\n  \"montoTotal\": 15000,\r\n  \"estadoOrden\": \"Pendiente\",\r\n  \"idCarrito\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/detalle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE DETALLE ORDEN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/ordenes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"ordenes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

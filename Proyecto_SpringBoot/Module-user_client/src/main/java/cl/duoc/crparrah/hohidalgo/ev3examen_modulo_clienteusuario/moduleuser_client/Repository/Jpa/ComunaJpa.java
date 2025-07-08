@@ -9,17 +9,22 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table(name = "comuna")
+@Table(name = "comunas")
 public class ComunaJpa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id_comuna", nullable = false, updatable = false, unique = true)
-    private Integer comuna;
+    private Integer idComuna;
 
     @Column (name = "nombre_comuna", nullable = false, unique = true)
     private String nombreComuna;
 
     @ManyToOne
     @JoinColumn (name = "id_provincia", nullable = false)
-    private ProvinciaJpa provinciaJpa;
+    private ProvinciaJpa idProvincia;
+
+    public ComunaJpa(String nombreComuna, ProvinciaJpa idProvincia) {
+        this.nombreComuna = nombreComuna;
+        this.idProvincia = idProvincia;
+    }
 }
